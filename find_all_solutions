@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>
+         Redirecting to the online supplement
+      </title>
+      <style type="text/css">
+         body { line-height: 1.8 }
+      </style>
+   </head>
+   <body>
+      <noscript>
+         <p>
+            <b>JavaScript is disabled in your browser.</b><br/>
+            Please click on the link below to get to the online supplement.<br/>
+            <a href="http://www.mat.univie.ac.at/~neum/ms/maniSolSuppl/">http://www.mat.univie.ac.at/~neum/ms/maniSolSuppl/</a>
+         </p>
+      </noscript>
+      <script type="text/javascript">
+         function Redirect() {
+             window.location="http://www.mat.univie.ac.at/~neum/ms/maniSolSuppl/";
+         }
+         document.write('<p>You will be automatically redirected to the online supplement at<br/>' +
+                        '<a href="http://www.mat.univie.ac.at/~neum/ms/maniSolSuppl/">http://www.mat.univie.ac.at/~neum/ms/maniSolSuppl/</a></br>' +
+                        'in 5 seconds.</p>');
+         setTimeout('Redirect()', 5000);
+      </script>
+   </body>
+</html>
+
