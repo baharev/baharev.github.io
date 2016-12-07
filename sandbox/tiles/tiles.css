@@ -47,3 +47,15 @@ img {
       flex-basis: 100vw;
   }
 }
+
+@media screen and (orientation: portrait) {
+    #css_orientation::after {
+        content: "portrait"
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #css_orientation::after {
+        content: "landscape"
+    }
+}

@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="tiles.css">
 </head>
 <body>
-      <!--
-      <nav role="navigation">
-         {menu_links}
-      </nav>
-      -->
       <div class="container">
 
           <div class="tile">
@@ -31,5 +26,16 @@
           </div>
 
       </div>
+
+      <p id="dimensions"> JavaScript sees: </p>
+      <p id="css_orientation"> CSS orientation: </p>
+
+      <script type="text/javascript">
+          window.onresize = displayWindowSize;
+          window.onload = displayWindowSize;
+          function displayWindowSize() {
+              document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
+          };
+      </script>
 </body>
 </html>
