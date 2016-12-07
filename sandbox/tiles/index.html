@@ -8,7 +8,21 @@
 </head>
 <body>
 
-    <h1> Tiles </h1>
+    <p id="dimensions"> JavaScript sees: </p>
+    <p id="css_orientation"> CSS orientation: </p>
+    <p id="user_agent"> User agent: </p>
+
+    <script type="text/javascript">
+        /* Write screen size */
+        window.onresize = displayWindowSize;
+        window.onload = displayWindowSize;
+        function displayWindowSize() {
+            document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
+        };
+        /* Write the user agent info */
+        document.getElementById("user_agent").innerHTML =
+            "User agent: " + navigator.userAgent;
+    </script>
 
       <div class="container">
 
@@ -29,21 +43,5 @@
           </div>
 
       </div>
-
-      <p id="dimensions"> JavaScript sees: </p>
-      <p id="css_orientation"> CSS orientation: </p>
-      <p id="user_agent"> User agent: </p>
-
-      <script type="text/javascript">
-          /* Write screen size */
-          window.onresize = displayWindowSize;
-          window.onload = displayWindowSize;
-          function displayWindowSize() {
-              document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
-          };
-          /* Write browser name and version, and the platform */
-          document.getElementById("user_agent").innerHTML =
-              "User agent: " + navigator.userAgent;
-      </script>
 </body>
 </html>

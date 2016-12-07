@@ -13,11 +13,13 @@ img {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     border: 0;
 }
 
 p {
+    margin: 0;
+    padding: 0;
     padding-left: 2ch;
 }
 
@@ -34,21 +36,21 @@ p {
 }
 
 .tile {
-    flex-basis: 25vw;
+    flex-basis: 23vw;
     min-width: 20px;
-    background-color: lightgray; /* yellow */
+    background-color: lightgray; /* yellow;*/
     /*border: 2px solid red;*/
 }
 
 @media screen and (max-width: 768px) {
     .tile {
-        flex-basis: 50vw;
+        flex-basis: 46vw;
     }
 }
 
 @media screen and (max-width: 480px) {
   .tile {
-      flex-basis: 100vw;
+      flex-basis: 92vw;
   }
 }
 
