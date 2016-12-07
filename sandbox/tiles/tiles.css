@@ -40,6 +40,18 @@ p {
     min-width: 20px;
     background-color: lightgray; /* yellow;*/
     /*border: 2px solid red;*/
+
+    position: relative;
+}
+
+.img_text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    text-align: center;
+    color: yellow
 }
 
 @media screen and (max-width: 768px) {
