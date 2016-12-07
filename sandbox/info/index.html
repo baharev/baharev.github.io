@@ -2,34 +2,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiles</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif">
-    <link rel="stylesheet" href="tiles.css">
+    <title>Info</title>
+    <style type="text/css">
+        html, body {
+            background-color: lightgray;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        p {
+            padding-left: 2ch;
+        }
+        @media screen and (orientation: portrait) {
+            #css_orientation::after {
+                content: "portrait"
+            }
+        }
+        @media screen and (orientation: landscape) {
+            #css_orientation::after {
+                content: "landscape"
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <h1> Tiles </h1>
-
-      <div class="container">
-
-          <div class="tile">
-              <img src="images/alma.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <img src="images/bogre.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <img src="images/borotva.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <img src="images/cica.jpg" alt=""/>
-          </div>
-
-      </div>
-
       <p id="dimensions"> JavaScript sees: </p>
       <p id="css_orientation"> CSS orientation: </p>
       <p id="user_agent"> User agent: </p>
@@ -42,8 +39,7 @@
               document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
           };
           /* Write browser name and version, and the platform */
-          document.getElementById("user_agent").innerHTML =
-              "User agent: " + navigator.userAgent;
+          document.getElementById("user_agent").innerHTML = "User agent: " + navigator.userAgent;
       </script>
 </body>
 </html>

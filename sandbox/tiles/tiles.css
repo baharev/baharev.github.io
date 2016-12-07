@@ -17,6 +17,10 @@ img {
     border: 0;
 }
 
+p {
+    padding-left: 2ch;
+}
+
 .container {
     box-sizing: border-box;
     margin: 0;
