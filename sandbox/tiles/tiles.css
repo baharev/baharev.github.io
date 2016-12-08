@@ -90,6 +90,10 @@ img {
     border: 0;
 }
 
+img:active {
+    transform: translateY(2px);
+}
+
 .img_text { /* The parent is tile and not img! */
     position: absolute;
     top: 90%;
