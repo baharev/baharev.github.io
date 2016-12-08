@@ -20,4 +20,5 @@ html, body {
     min-height: 100px;
     min-width: 100px;
     display: inline-block; /* <= Set to "display: block;" and it will be OK */
+    vertical-align: bottom;
 }
