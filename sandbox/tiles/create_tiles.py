@@ -34,26 +34,27 @@ PREAMBLE = \
     <link rel="stylesheet" href="tiles.css">
 </head>
 <body>
-    <!--
-    <p id="dimensions"> JavaScript sees: </p>
-    <script type="text/javascript">
-        /* Write screen size */
-        window.onresize = displayWindowSize;
-        window.onload = displayWindowSize;
-        function displayWindowSize() {
-            document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
-        };
-    </script>
-    -->
       <nav>
         <div class="navlinks">
           <a href="">Home</a>
           <a href="">About</a>
           <a href="">Store</a>
           <a href="">Contact</a>
+          <p id="screen_size"> </p>
           <div id="filler"> </div>
         </div>
       </nav>
+
+    <script type="text/javascript">
+        /* Write screen size */
+        window.onresize = displayWindowSize;
+        window.onload = displayWindowSize;
+        function displayWindowSize() {
+            document.getElementById("screen_size").innerHTML = 
+                "(" + window.innerWidth + "x" + window.innerHeight + ")";
+        };
+    </script>
+      
       <div class="container">
 '''
 
