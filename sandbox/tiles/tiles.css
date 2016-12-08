@@ -17,12 +17,6 @@ img {
     border: 0;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-    padding-left: 2ch;
-}
-
 .container {
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +24,7 @@ p {
     background-color: lightgray;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -38,15 +32,13 @@ p {
 .tile {
     flex-basis: 23vw;
     min-width: 20px;
-    background-color: lightgray; /* yellow;*/
-    /*border: 2px solid red;*/
-
+    background-color: yellow;
     position: relative;
 }
 
 .img_text {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 0;
     right: 0;
     transform: translate(0, -50%);
@@ -64,16 +56,4 @@ p {
   .tile {
       flex-basis: 92vw;
   }
-}
-
-@media screen and (orientation: portrait) {
-    #css_orientation::after {
-        content: "portrait"
-    }
-}
-
-@media screen and (orientation: landscape) {
-    #css_orientation::after {
-        content: "landscape"
-    }
 }
