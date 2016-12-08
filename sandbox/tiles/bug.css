@@ -32,15 +32,28 @@ img {
     min-width: 20px;
     background-color: yellow;
     display: flex;
+    position: relative;
 }
 
+
+.img_text {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    text-align: center;
+    color: yellow
+}
+
+/*
 .box {
     background-color: blue;
-    min-height: 10px;
-    width: 23vw;
-    flex: 1 1 23vw;
+    height: 50px;
+    max-width: 0;
+    /*flex: 1 1 23vw;*/
 }
-
+*/
 * {
   margin: 0;
   padding: 0;
