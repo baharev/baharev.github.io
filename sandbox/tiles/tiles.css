@@ -38,6 +38,8 @@ nav {
   padding-left: 1ch;
   padding-right: 1ch;
   flex: 0.2 0.2;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }
 
 .navlinks a:hover{
@@ -88,7 +90,8 @@ img {
     margin: 0;
     padding: 2px;
     border: 0;
-    transition-duration: 0.15s;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
 }
 
 img:active {
