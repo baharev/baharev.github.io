@@ -88,10 +88,12 @@ img {
     margin: 0;
     padding: 2px;
     border: 0;
+    transition-duration: 0.2s;
 }
 
 img:active {
-    transform: translateY(2px);
+    transform: scale(0.9);
+    opacity: 1;
 }
 
 .img_text { /* The parent is tile and not img! */
