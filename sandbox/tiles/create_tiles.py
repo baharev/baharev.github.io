@@ -7,20 +7,22 @@ from os import listdir
 def main():
     images = sorted(f for f in listdir('images/') if f.endswith('.JPG'))
     print(', '.join(images))
-    tiles = '\n'.join(to_tile(img) for img in images)
+    tiles = '\n'.join(to_tile(img, i) for i, img in enumerate(images, 1))
     with open('index.html', 'w') as f:
         f.write(PREAMBLE)
         f.write(tiles)
         f.write(POSTAMBLE)
 
-def to_tile(img):
-    return TILE.format(img)
+def to_tile(img, i):
+    return TILE.format(image=img, i=str(i).zfill(2))
 
 TILE = \
 '''
+          <audio id="audio{i}" src="audio/{i}.mp3" preload="auto"></audio>
+
           <div class="tile">
-              <span class="img_text">{0}</span>   
-              <img src="images/{0}" alt="{0}"/>
+              <span class="img_text">{image}</span>
+              <img src="images/{image}" alt="{image}" onclick="document.getElementById('audio{i}').play();"/>
           </div>
 '''
 
@@ -60,29 +62,6 @@ PREAMBLE = \
       
       <div class="container">
 '''
-
-'''
-          <div class="tile">
-              <span class="img_text">alma</span>
-              <img src="images/alma.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <span class="img_text">bögre</span>
-              <img src="images/bogre.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <span class="img_text">borotva</span>
-              <img src="images/borotva.jpg" alt=""/>
-          </div>
-
-          <div class="tile">
-              <span class="img_text">cica</span>   
-              <img src="images/cica.jpg" alt=""/>
-          </div>
-'''
-
 
 POSTAMBLE = \
 '''
