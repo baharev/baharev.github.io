@@ -32,6 +32,9 @@ PREAMBLE = \
     <title>Tiles</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif">
     <link rel="stylesheet" href="tiles.css">
+    <script type='application/javascript'>
+      document.addEventListener("touchstart", function() {}, false);
+    </script>
 </head>
 <body>
       <nav>
