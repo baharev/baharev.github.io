@@ -34,6 +34,7 @@ PREAMBLE = \
     <link rel="stylesheet" href="tiles.css">
 </head>
 <body>
+    <!--
     <p id="dimensions"> JavaScript sees: </p>
     <script type="text/javascript">
         /* Write screen size */
@@ -43,7 +44,16 @@ PREAMBLE = \
             document.getElementById("dimensions").innerHTML = "JavaScript sees: " + window.innerWidth + "x" + window.innerHeight + " pixels";
         };
     </script>
-
+    -->
+      <nav>
+        <div class="navlinks">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Store</a>
+          <a href="">Contact</a>
+          <div id="filler"> </div>
+        </div>
+      </nav>
       <div class="container">
 '''
 
