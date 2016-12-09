@@ -18,7 +18,7 @@ def to_tile(img, i):
 
 TILE = \
 '''
-          <audio id="audio{i}" src="audio/{i}.ogg" preload="auto" type="audio/ogg"></audio>
+          <audio id="audio{i}" src="audio/{i}.mp3" preload="auto" type="audio/mpeg"></audio>
 
           <div class="tile">
               <span class="img_text">{image}</span>
