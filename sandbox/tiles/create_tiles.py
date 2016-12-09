@@ -1,27 +1,35 @@
 # Copyright (C) 2016 by Ali Baharev <ali.baharev@gmail.com>
 # All rights reserved.
 # BSD license.
-
+from itertools import count
 from os import listdir
 
 def main():
     images = sorted(f for f in listdir('images/') if f.endswith('.JPG'))
+    captions = image_captions()
     print(', '.join(images))
-    tiles = '\n'.join(to_tile(img, i) for i, img in enumerate(images, 1))
+    tiles = '\n'.join(to_tile(*tup) for tup in zip(images, captions, count(1)))
     with open('index.html', 'w') as f:
         f.write(PREAMBLE)
         f.write(tiles)
         f.write(POSTAMBLE)
 
-def to_tile(img, i):
-    return TILE.format(image=img, i=str(i).zfill(2))
+
+def image_captions():
+    with open('text/captions.txt') as f:
+        lines = [l.strip() for l in f]
+    print(lines)
+    return lines
+
+def to_tile(image, caption, i):
+    return TILE.format(image=image, caption=caption, i=str(i).zfill(2))
 
 TILE = \
 '''
           <audio id="audio{i}" src="audio/{i}.m4a" preload="auto" type="audio/mp4"></audio>
 
           <div class="tile">
-              <span class="img_text">{image}</span>
+              <span class="img_text">{caption}</span>
               <img src="images/{image}" alt="{image}" onclick="document.getElementById('audio{i}').play();"/>
           </div>
 '''
@@ -32,7 +40,7 @@ PREAMBLE = \
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiles</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="tiles.css">
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
