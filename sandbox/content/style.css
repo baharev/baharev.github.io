@@ -38,6 +38,7 @@ nav {
   display: flex;
   justify-content: flex-start;
 
+  box-sizing: border-box;
   max-width: 60ch; /* Must match the width of the article */
 
   border: 2px yellow solid;
@@ -113,10 +114,15 @@ nav {
   box-sizing: border-box;
   border: 3px solid blue;
 
-  /*width: calc(50% - 35ch);*/
+  width: calc(50% - 30ch);
   height: calc(100vh - 5ex);
   display: block;
   overflow: hidden;
+
+  background-image: url("../images/background_left.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
 }
 
 #right_image {
@@ -128,8 +134,98 @@ nav {
   box-sizing: border-box;
   border: 3px solid blue;
 
-  /*width: calc(50% - 35ch);*/
+  width: calc(50% - 30ch);
   height: calc(100vh - 5ex);
   display: block;
   overflow: hidden;
+
+  background-image: url("../images/background_right.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1200px) {
+
+  nav {
+    padding-left: 2ch;
+    justify-content: flex-start;
+  }
+
+
+  #left_image {
+    display: none;
+  }
+
+  #content {
+    margin-left: 2ch;
+  }
+
+  #right_image {
+    background-image: url("../images/background.jpg");
+    left: calc(62ch);
+    width: calc(100% - 62ch);
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+
+  nav {
+    padding-left: 0;
+    justify-content:  flex-start;
+  }
+
+  .menubar {
+    max-width: none;
+  }
+
+  #left_image {
+    display: none;
+  }
+
+  #content {
+    margin: 0 auto;
+    max-width: 60ch;
+    width: auto;
+  }
+
+  #right_image {
+    display: none;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+  nav {
+    position: static;
+    top: auto;
+    height: auto;
+  }
+
+  .menubar {
+    flex-flow: column;
+  }
+
+  .menuitem {
+    max-width: none;
+  }
+
+  .menuitem a {
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+  }
+
+  #spring {
+    display: none;
+  }
+
+  #content_wrapper {
+    margin-top: 0;
+  }
+
 }
