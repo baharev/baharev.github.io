@@ -19,7 +19,7 @@ nav {
   top: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 20ex;
+  height: 5ex;
 
   /* Center the menubar (the only child) */
   display: flex;
@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: flex-start;
 
-  max-width: 70ch; /* Must match the width of the article */
+  max-width: 60ch; /* Must match the width of the article */
 
   border: 2px yellow solid;
 }
@@ -84,7 +84,7 @@ nav {
 
 #content_wrapper {
   /* This element must have a top margin that equals the height of the <nav> */
-  margin-top: 20ex;
+  margin-top: 5ex;
   box-sizing: border-box;
   border: 3px yellow solid;
 }
@@ -96,38 +96,40 @@ nav {
 
   background-color: antiquewhite;
   color: black;
-  width: 70ch;
+  width: 60ch;
+  min-height: calc(100vh - 5ex);
   padding-left: 2ch;
   padding-right: 2ch;
   padding-top: 3ex;
   padding-bottom: 10ex;
+  line-height: 180%;
 }
 
 #left_image {
   position: fixed;
-  top: 20ex;
-  right: calc(50% + 35ch);
+  top: 5ex;
+  right: calc(50% + 30ch);
 
   box-sizing: border-box;
   border: 3px solid blue;
 
   /*width: calc(50% - 35ch);*/
-  height: calc(100vh - 20ex);
+  height: calc(100vh - 5ex);
   display: block;
   overflow: hidden;
 }
 
 #right_image {
   position: fixed;
-  top: 20ex;
+  top: 5ex;
   right: 0;
-  left: calc(50% + 35ch);
+  left: calc(50% + 30ch);
 
   box-sizing: border-box;
   border: 3px solid blue;
 
   /*width: calc(50% - 35ch);*/
-  height: calc(100vh - 20ex);
+  height: calc(100vh - 5ex);
   display: block;
   overflow: hidden;
 }
