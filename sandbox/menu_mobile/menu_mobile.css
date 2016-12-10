@@ -28,6 +28,11 @@ nav {
   background: #333;
   color: white;
   border-bottom: 2px ridge white;
+
+  /* Mobile overrides: */
+  position: static;
+  top: auto;
+  height: auto;
 }
 
 .menubar {
@@ -38,15 +43,21 @@ nav {
   justify-content: flex-start;
 
   border: 2px yellow solid;
+
+  /* Mobile overrides: */
+  flex-flow: column;
 }
 
 .menuitem {
   /* Menu items can grow but to at most 15ch in width */
-   flex: 1 0;
-   max-width: 15ch;
-   box-sizing: border-box;
-   margin: 3px;
-   border: 2px red solid;
+  flex: 1 0;
+  max-width: 15ch;
+  box-sizing: border-box;
+  margin: 3px;
+  border: 2px red solid;
+
+  /* Mobile overrides: */
+  max-width: none;
 }
 
 .menuitem a {
@@ -61,6 +72,10 @@ nav {
 
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
+
+  /* Mobile overrides: */
+  padding-top: 1ex;
+  padding-bottom: 1ex;
 }
 
 .menuitem a:hover{
@@ -75,19 +90,21 @@ nav {
   margin: 3px;
   border: 2px #33FF00 solid;
   min-width: 0;
+
+  /* Mobile overrides: */
+  display: none;
 }
 
 /*----------------------------------------------------------------------------*/
 
 #big_dummy_content {
-  /* This div must have a top margin that equals the height of the <nav> */
-  margin: 0 auto;
-  margin-top: 20ex;
-
+  /* On a real website, this div must have a top margin that equals
+     the height of the <nav>, see above
+  */
   background-color: lightgray;
   background-image: linear-gradient(transparent 50%, rgba(255,255,255,.5) 50%);
   background-size: 50px 50px;
   min-height: 5000px;
   width: 300px;
-
+  margin: 0 auto;
 }
