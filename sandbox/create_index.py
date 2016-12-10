@@ -6,7 +6,8 @@ from os import listdir
 from os.path import isdir
 
 def main():
-    dirs = sorted(e for e in listdir('.') if isdir(e) and e != '__pycache__')
+    ignore = set(('__pycache__', 'images'))
+    dirs = sorted(e for e in listdir('.') if isdir(e) and e not in ignore)
     print(', '.join(dirs))
     links = '\n'.join(to_link(d) for d in dirs)
     with open('index.html', 'w') as f:
