@@ -1,0 +1,91 @@
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+
+nav {
+  /* Pin this element to the top of the page */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20ex;
+
+  /* Put the menubar (children) into the middle vertically */
+  display: flex;
+  align-items: center;
+
+  background: #333;
+  color: white;
+  border-bottom: 2px ridge white;
+}
+
+.menubar {
+  flex: 1;
+
+  /* Put the menu items (children) to the left */
+  display: flex;
+  justify-content: flex-start;
+
+  border: 2px yellow solid;
+}
+
+.menuitem {
+  /* Menu items can grow but to at most 15ch in width */
+   flex: 1 0;
+   max-width: 15ch;
+   box-sizing: border-box;
+   margin: 3px;
+   border: 2px red solid;
+}
+
+.menuitem a {
+  text-decoration: none;
+
+  display: block;
+  text-align: center;
+
+  color: white;
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.menuitem a:hover{
+  background-color: #555;
+}
+
+#spring {
+  /* Acts like a spring */
+  flex: 1 1;
+
+  box-sizing: border-box;
+  margin: 3px;
+  border: 2px #33FF00 solid;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#big_dummy_content {
+  /* On a real website, this div must have a top margin that equals
+     the height of the <nav>, see above
+  */
+  background-color: lightgray;
+  background-image: linear-gradient(transparent 50%, rgba(255,255,255,.5) 50%);
+  background-size: 50px 50px;
+  min-height: 5000px;
+  width: 300px;
+  margin: 0 auto;
+}
