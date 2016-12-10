@@ -113,7 +113,8 @@ nav {
   background-size: 50px 50px;
   min-height: 5000px;
   width: 300px;
-  
+
   /* Mobile overrides: */
   margin-top: 0;
+  width: 100vw;
 }
