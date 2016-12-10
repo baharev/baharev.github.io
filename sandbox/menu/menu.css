@@ -74,6 +74,7 @@ nav {
   box-sizing: border-box;
   margin: 3px;
   border: 2px #33FF00 solid;
+  min-width: 0;
 }
 
 /*----------------------------------------------------------------------------*/
