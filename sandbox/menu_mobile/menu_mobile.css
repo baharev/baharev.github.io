@@ -2,12 +2,18 @@
 html, body {
     font-family: 'Roboto', sans-serif;
     color: black;
-    background-color: lightgray;
+    background-color: dimgray;
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     border: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -84,7 +90,7 @@ nav {
 
 #spring {
   /* Acts like a spring */
-  flex: 1 1;
+  flex: 1 10;
 
   box-sizing: border-box;
   margin: 3px;
@@ -98,13 +104,16 @@ nav {
 /*----------------------------------------------------------------------------*/
 
 #big_dummy_content {
-  /* On a real website, this div must have a top margin that equals
-     the height of the <nav>, see above
-  */
+  /* This div must have a top margin that equals the height of the <nav> */
+  margin: 0 auto;
+  margin-top: 20ex;
+
   background-color: lightgray;
   background-image: linear-gradient(transparent 50%, rgba(255,255,255,.5) 50%);
   background-size: 50px 50px;
   min-height: 5000px;
   width: 300px;
-  margin: 0 auto;
+  
+  /* Mobile overrides: */
+  margin-top: 0;
 }
