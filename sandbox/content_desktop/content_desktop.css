@@ -111,7 +111,7 @@ nav {
   box-sizing: border-box;
   border: 3px solid blue;
 
-  width: calc(50% - 35ch);
+  /*width: calc(50% - 35ch);*/
   height: calc(100vh - 20ex);
   display: block;
   overflow: hidden;
@@ -126,7 +126,7 @@ nav {
   box-sizing: border-box;
   border: 3px solid blue;
 
-  width: calc(50% - 35ch);
+  /*width: calc(50% - 35ch);*/
   height: calc(100vh - 20ex);
   display: block;
   overflow: hidden;
