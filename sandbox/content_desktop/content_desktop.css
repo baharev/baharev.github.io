@@ -82,13 +82,17 @@ nav {
 
 /*----------------------------------------------------------------------------*/
 
-#big_dummy_content {
+#content_wrapper {
   /* This element must have a top margin that equals the height of the <nav> */
-  margin: 0 auto;
   margin-top: 20ex;
-  display: block;
   box-sizing: border-box;
-  border: 2px yellow solid;
+  border: 3px yellow solid;
+}
+
+#content {
+  box-sizing: border-box;
+  border: 3px #49fb35 solid;
+  margin: 0 auto;
 
   background-color: antiquewhite;
   color: black;
@@ -98,8 +102,32 @@ nav {
   padding-top: 3ex;
   padding-bottom: 10ex;
 }
-/*
-h1, p {
-  font-size: x-large;
+
+#left_image {
+  position: fixed;
+  top: 20ex;
+  right: calc(50% + 35ch);
+
+  box-sizing: border-box;
+  border: 3px solid blue;
+
+  width: calc(50% - 35ch);
+  height: calc(100vh - 20ex);
+  display: block;
+  overflow: hidden;
 }
-*/
+
+#right_image {
+  position: fixed;
+  top: 20ex;
+  right: 0;
+  left: calc(50% + 35ch);
+
+  box-sizing: border-box;
+  border: 3px solid blue;
+
+  width: calc(50% - 35ch);
+  height: calc(100vh - 20ex);
+  display: block;
+  overflow: hidden;
+}
