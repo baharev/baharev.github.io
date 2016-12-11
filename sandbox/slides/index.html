@@ -4,20 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albumok</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="slides.css">
+    <link rel="stylesheet" href="albums.css">
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
     </script>
 </head>
 <body>
-
-  <div id="albums">
-    <p>A diavetítés indításához kattintson a képre</p>
-    <a href="slide_01.html">
-        <span class="album_text">2016</span>
-        <img src="images/CIMG1816.JPG" alt="CIMG1816.JPG">
-    </a>
+  <div id=instructions>
+    <span>A diavetítés indításához kattintson a képre</span>
   </div>
-
+  <div id="albums">
+    <div id="image_container">
+      <!--
+      <a href="slide_01.html">
+          <span class="album_text">2016</span>
+          </div><img src="images/CIMG1816.JPG" alt="CIMG1816.JPG">
+      </a>
+      -->
+      <img src="images/CIMG1816.JPG" alt="CIMG1816.JPG" onclick="parent.location='slide_01.html'">
+    </div>
+  </div>
 </body>
 </html>
