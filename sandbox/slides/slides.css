@@ -181,17 +181,18 @@ span {
 
 /*----------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1200px) {
-    nav {
-      max-width: 93vw;
-    }
+@media screen and (orientation: landscape) {
 
-    .tile {
-        flex-basis: 31vw;
-    }
+  nav {
+    max-width: 93vw;
+  }
+
+  .tile {
+      flex-basis: 31vw;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (orientation: portrait) {
   nav {
     max-width: 92vw;
   }
@@ -199,15 +200,4 @@ span {
     .tile {
         flex-basis: 46vw;
     }
-}
-
-@media screen and (max-width: 480px) {
-
-  nav {
-    width: 100%;
-  }
-
-  .tile {
-      flex-basis: 92vw;
-  }
 }
