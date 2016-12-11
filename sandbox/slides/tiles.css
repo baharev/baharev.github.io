@@ -1,7 +1,7 @@
 
 html, body {
     font-family: 'Roboto', sans-serif;;
-    background-color: lightgray;
+    background-color: lightgrey;
     width: 100%;
     height: 100%;
     padding: 0;
@@ -23,6 +23,24 @@ nav {
   align-items: center;
 
   color: white;
+  height: 4ex;
+  margin-bottom: 4px;
+
+  position: relative;
+}
+
+#banner {
+  position: absolute;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4ex;
+  background-color: gray;
+  z-index: 0;
+  border-bottom: 2px ridge #333;
 }
 
 .menubar {
@@ -35,14 +53,11 @@ nav {
   box-sizing: border-box;
 
   /*border: 2px yellow solid;*/
-
   font-size: large;
 }
 
 .menuitem {
-  /* Menu items can grow but to at most 15ch in width */
-  flex: 1 0;
-  max-width: 12ch;
+  flex: 1;
   box-sizing: border-box;
   margin-top: 3px;
   margin-bottom: 3px;
@@ -60,24 +75,24 @@ nav {
   color: white;
   padding-left: 0.5ch;
   padding-right: 0.5ch;
+  min-width: 10ch;
 
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
 
-  background-color: darkgreen;
-  border-color: darkgreen;
+  background-color: #333;
+  border-color: #333;
   border-radius: 3px;
-  border: 3px solid darkgreen;
+  border: 3px solid #333;
 }
 
 .menuitem a:hover{
-  background-color: limegreen;
-  border-color: limegreen;
+  background-color: #555;
+  border-color: #555;
 }
 
 #spring {
-  /* Acts like a spring */
-  flex: 1 10;
+  flex: 1 100;
 
   box-sizing: border-box;
   /*margin: 3px;*/

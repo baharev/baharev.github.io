@@ -26,7 +26,7 @@ def to_tile(image, caption, i):
 
 TILE = \
 '''
-          <audio id="audio{i}" src="audio/{i}.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio{i}" src="audio/{i}.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">{caption}</span>
