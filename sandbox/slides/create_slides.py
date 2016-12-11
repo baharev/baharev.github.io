@@ -3,17 +3,28 @@
 # BSD license.
 from itertools import count
 from os import listdir
+from toolz import partition_all
 
 def main():
     images = sorted(f for f in listdir('images/') if f.endswith('.JPG'))
     captions = image_captions()
-    print(', '.join(images))
-    tiles = '\n'.join(to_tile(*tup) for tup in zip(images, captions, count(1)))
-    with open('index.html', 'w') as f:
-        f.write(PREAMBLE)
+    content = list(zip(images, captions, count(1)))
+    step = 6
+    size = len(content) // step
+    for i, img_cap_idx_list in enumerate(partition_all(step, content)):
+        create_slide(i, size, img_cap_idx_list)
+
+
+def create_slide(i, size, img_cap_idx_list):
+    tiles = '\n'.join(to_tile(*tup) for tup in img_cap_idx_list)
+    fname = 'slide_{:02d}.html'
+    prev, nxt = (i-1+size) % size, (i+1) % size
+    prev, nxt = fname.format(prev+1), fname.format(nxt+1)
+    with open(fname.format(i+1), 'w') as f:
+        f.write(PREAMBLE.format(i=str(i+1), prev=prev, next=nxt))
         f.write(tiles)
         f.write(POSTAMBLE)
-
+    
 
 def image_captions():
     with open('text/captions.txt') as f:
@@ -39,36 +50,31 @@ PREAMBLE = \
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiles</title>
+    <title>Slide {i}</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="tiles.css">
+    <link rel="stylesheet" href="slides.css">
     <script type='application/javascript'>
-      document.addEventListener("touchstart", function() {}, false);
+      document.addEventListener("touchstart", function() {{}}, false);
     </script>
 </head>
 <body>
-      <nav>
-        <div class="navlinks">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Store</a>
-          <a href="">Contact</a>
-          <p id="screen_size"> </p>
-          <div id="filler"> </div>
-        </div>
-      </nav>
-
-    <script type="text/javascript">
-        /* Write screen size */
-        window.onresize = displayWindowSize;
-        window.onload = displayWindowSize;
-        function displayWindowSize() {
-            document.getElementById("screen_size").innerHTML = 
-                "(" + window.innerWidth + "x" + window.innerHeight + ")";
-        };
-    </script>
-      
       <div class="container">
+        <div id="banner"></div>
+        <nav>
+          <div class="menubar">
+             <div class="menuitem">
+                <a href="{next}">&#x21e8;&nbsp;Következő</a>
+              </div>
+              <div class="menuitem">
+                <a href="{prev}">&#x21e6;&nbsp;Előző</a>
+              </div>
+              <div id="spring">
+              </div>
+              <div class="menuitem">
+                <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
+              </div>
+          </div>
+        </nav>
 '''
 
 POSTAMBLE = \

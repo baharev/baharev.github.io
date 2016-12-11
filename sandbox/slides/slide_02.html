@@ -2,86 +2,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiles</title>
+    <title>Slide 2</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="tiles.css">
+    <link rel="stylesheet" href="slides.css">
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
     </script>
 </head>
 <body>
-      <nav>
-        <div class="navlinks">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Store</a>
-          <a href="">Contact</a>
-          <p id="screen_size"> </p>
-          <div id="filler"> </div>
-        </div>
-      </nav>
-
-    <script type="text/javascript">
-        /* Write screen size */
-        window.onresize = displayWindowSize;
-        window.onload = displayWindowSize;
-        function displayWindowSize() {
-            document.getElementById("screen_size").innerHTML = 
-                "(" + window.innerWidth + "x" + window.innerHeight + ")";
-        };
-    </script>
-      
       <div class="container">
-
-          <audio id="audio01" src="audio/01.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">München</span>
-              <img src="images/CIMG0753.JPG" alt="CIMG0753.JPG" onclick="document.getElementById('audio01').play();"/>
+        <div id="banner"></div>
+        <nav>
+          <div class="menubar">
+             <div class="menuitem">
+                <a href="slide_03.html">&#x21e8;&nbsp;Következő</a>
+              </div>
+              <div class="menuitem">
+                <a href="slide_01.html">&#x21e6;&nbsp;Előző</a>
+              </div>
+              <div id="spring">
+              </div>
+              <div class="menuitem">
+                <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
+              </div>
           </div>
+        </nav>
 
-
-          <audio id="audio02" src="audio/02.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Hunderwasser ház</span>
-              <img src="images/CIMG0924.JPG" alt="CIMG0924.JPG" onclick="document.getElementById('audio02').play();"/>
-          </div>
-
-
-          <audio id="audio03" src="audio/03.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Brandenburgi kapu</span>
-              <img src="images/CIMG1226.JPG" alt="CIMG1226.JPG" onclick="document.getElementById('audio03').play();"/>
-          </div>
-
-
-          <audio id="audio04" src="audio/04.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Quadriga</span>
-              <img src="images/CIMG1261.JPG" alt="CIMG1261.JPG" onclick="document.getElementById('audio04').play();"/>
-          </div>
-
-
-          <audio id="audio05" src="audio/05.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Pariser Platz</span>
-              <img src="images/CIMG1264.JPG" alt="CIMG1264.JPG" onclick="document.getElementById('audio05').play();"/>
-          </div>
-
-
-          <audio id="audio06" src="audio/06.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Schwechat, Airbus A320</span>
-              <img src="images/CIMG1721.JPG" alt="CIMG1721.JPG" onclick="document.getElementById('audio06').play();"/>
-          </div>
-
-
-          <audio id="audio07" src="audio/07.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio07" src="audio/07.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">Hidroplán</span>
@@ -89,7 +36,7 @@
           </div>
 
 
-          <audio id="audio08" src="audio/08.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio08" src="audio/08.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">A kis hableány</span>
@@ -97,7 +44,7 @@
           </div>
 
 
-          <audio id="audio09" src="audio/09.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio09" src="audio/09.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">(árvíztűrő tükörfúrógép)</span>
@@ -105,7 +52,7 @@
           </div>
 
 
-          <audio id="audio10" src="audio/10.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio10" src="audio/10.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">(ÁRVÍZTŰRŐ TÜKÖRFÚRÓGÉP)</span>
@@ -113,7 +60,7 @@
           </div>
 
 
-          <audio id="audio11" src="audio/11.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio11" src="audio/11.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">Nyhavn 17</span>
@@ -121,59 +68,11 @@
           </div>
 
 
-          <audio id="audio12" src="audio/12.m4a" preload="auto" type="audio/mp4"></audio>
+          <audio id="audio12" src="audio/12.m4a"></audio>
 
           <div class="tile">
               <span class="img_text">Schönbrunn</span>
               <img src="images/CIMG2310.JPG" alt="CIMG2310.JPG" onclick="document.getElementById('audio12').play();"/>
-          </div>
-
-
-          <audio id="audio13" src="audio/13.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Károly híd, Prága</span>
-              <img src="images/CIMG2742.JPG" alt="CIMG2742.JPG" onclick="document.getElementById('audio13').play();"/>
-          </div>
-
-
-          <audio id="audio14" src="audio/14.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Gustav Klimt, Zwickelbild im Stiegenhaus</span>
-              <img src="images/CIMG3022.JPG" alt="CIMG3022.JPG" onclick="document.getElementById('audio14').play();"/>
-          </div>
-
-
-          <audio id="audio15" src="audio/15.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Strauß szobor</span>
-              <img src="images/CIMG3140.JPG" alt="CIMG3140.JPG" onclick="document.getElementById('audio15').play();"/>
-          </div>
-
-
-          <audio id="audio16" src="audio/16.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Karácsonyi vásár</span>
-              <img src="images/CIMG3156.JPG" alt="CIMG3156.JPG" onclick="document.getElementById('audio16').play();"/>
-          </div>
-
-
-          <audio id="audio17" src="audio/17.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Barackos sütemény</span>
-              <img src="images/CIMGXX17.JPG" alt="CIMGXX17.JPG" onclick="document.getElementById('audio17').play();"/>
-          </div>
-
-
-          <audio id="audio18" src="audio/18.m4a" preload="auto" type="audio/mp4"></audio>
-
-          <div class="tile">
-              <span class="img_text">Vő Úr dobostortája</span>
-              <img src="images/CIMGXX18.JPG" alt="CIMGXX18.JPG" onclick="document.getElementById('audio18').play();"/>
           </div>
 
       </div>
