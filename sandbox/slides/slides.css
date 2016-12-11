@@ -17,6 +17,7 @@ html, body {
   padding-top: 10px;
   text-align: center;
   position: relative;
+  max-width: 92vw;
 }
 
 .album_text {
@@ -156,6 +157,7 @@ img {
 
 #albums img {
     display: inline-block;
+    max-width: 480px;
 }
 
 img:active {
