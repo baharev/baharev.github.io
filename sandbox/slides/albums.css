@@ -40,8 +40,8 @@ div, nav, span, img, h1, p {
 #image_container {
   max-width: 480px;
   max-height: 360px;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
 }
 
 #image_container img {

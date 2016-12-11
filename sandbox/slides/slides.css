@@ -182,3 +182,11 @@ span {
         flex-basis: 46vw;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .img_text {
+      font-size: large;
+  }
+}
