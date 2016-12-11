@@ -1,0 +1,9 @@
+
+The images should be at least centered.
+
+The album cover image should be sized dynamically. (iPhone)
+
+The 2x3 and 3x2 layouts should be selected better. It can overflow now. 
+(desktop portrait)
+
+
