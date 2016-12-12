@@ -29,20 +29,16 @@ div, nav, span, img, h1, p {
 }
 
 #albums {
-  display: flex;
-  justify-content: flex-start; /* center */
-  align-items: center;
-  flex-flow: column;
   box-sizing: border-box;
   height: calc(100% - 5ex);
 }
 
 #image_container {
-  flex-grow: 0;
   max-width: 960px;
   max-height: 720px;
   width: 95%;
   height: 95%;
+  margin: 0 auto;
 }
 
 #image_container img {
