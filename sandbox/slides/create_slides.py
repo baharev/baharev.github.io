@@ -67,8 +67,6 @@ PREAMBLE = \
           <div class="menuitem">
             <a href="{prev}">&#x21e6;&nbsp;Előző</a>
           </div>
-          <div id="spring">
-          </div>
           <div class="menuitem">
             <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
