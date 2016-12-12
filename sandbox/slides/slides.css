@@ -14,10 +14,16 @@ body {
 
 /*----------------------------------------------------------------------------*/
 
+/*/
+div, nav, span, img, h1, p {
+  border-style: solid ! important;
+  border-color: yellow;
+  box-sizing: border-box;
+}
+*/
+
 nav {
   flex: 1;
-  flex-basis: 92vw;
-  max-width: 92vw;
   box-sizing: border-box;
 
   /* Center the menubar (the only child) */
@@ -27,7 +33,6 @@ nav {
 
   color: white;
   height: 4ex;
-  margin-bottom: 4px;
 
   position: relative;
 }
@@ -100,12 +105,22 @@ nav {
   box-sizing: border-box;
   /*margin: 3px;*/
   /*border: 2px #33FF00 solid;*/
-  flex-basis: 92vw;
+  flex-basis: 100vw;
 }
 
 /*----------------------------------------------------------------------------*/
 
+.centering {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 4ex)
+}
+
 .container {
+    flex: 1;
+
     box-sizing: border-box;
 
     display: flex;
@@ -134,11 +149,6 @@ img {
     transition-timing-function: ease-in-out;
 }
 
-#albums img {
-    display: inline-block;
-    max-width: 480px;
-}
-
 img:active {
     transform: scale(0.95);
     opacity: 0.6;
@@ -164,19 +174,12 @@ span {
 
 @media screen and (orientation: landscape) {
 
-  nav {
-    max-width: 93vw;
-  }
-
   .tile {
       flex-basis: 31vw;
   }
 }
 
 @media screen and (orientation: portrait) {
-  nav {
-    max-width: 92vw;
-  }
 
     .tile {
         flex-basis: 46vw;
