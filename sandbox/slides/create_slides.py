@@ -58,28 +58,30 @@ PREAMBLE = \
     </script>
 </head>
 <body>
-      <div class="container">
-        <div id="banner"></div>
-        <nav>
-          <div class="menubar">
-             <div class="menuitem">
-                <a href="{next}">&#x21e8;&nbsp;Következő</a>
-              </div>
-              <div class="menuitem">
-                <a href="{prev}">&#x21e6;&nbsp;Előző</a>
-              </div>
-              <div id="spring">
-              </div>
-              <div class="menuitem">
-                <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
-              </div>
+    <div id="banner"></div>
+    <nav>
+      <div class="menubar">
+         <div class="menuitem">
+            <a href="{next}">&#x21e8;&nbsp;Következő</a>
           </div>
-        </nav>
+          <div class="menuitem">
+            <a href="{prev}">&#x21e6;&nbsp;Előző</a>
+          </div>
+          <div id="spring">
+          </div>
+          <div class="menuitem">
+            <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
+          </div>
+      </div>
+    </nav>
+    <div class="centering">
+      <div class="container">
 '''
 
 POSTAMBLE = \
 '''
       </div>
+   </div>
 </body>
 </html>
 '''
