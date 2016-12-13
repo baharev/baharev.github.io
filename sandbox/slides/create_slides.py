@@ -24,7 +24,7 @@ def create_slide(i, size, img_cap_idx_list):
         f.write(PREAMBLE.format(i=str(i+1), prev=prev, next=nxt))
         f.write(tiles)
         f.write(POSTAMBLE)
-    
+
 
 def image_captions():
     with open('text/captions.txt') as f:
@@ -61,24 +61,26 @@ PREAMBLE = \
     <div id="banner"></div>
     <nav>
       <div class="menubar">
-         <div class="menuitem">
-            <a href="{next}">&#x21e8;&nbsp;Következő</a>
-          </div>
           <div class="menuitem">
             <a href="{prev}">&#x21e6;&nbsp;Előző</a>
           </div>
           <div class="menuitem">
             <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
+         <div class="menuitem">
+            <a href="{next}">&#x21e8;&nbsp;Következő</a>
+          </div>
       </div>
     </nav>
     <div class="centering">
+      <div class="spring"> </div>
       <div class="container">
 '''
 
 POSTAMBLE = \
 '''
       </div>
+      <div class="spring"> </div>
    </div>
 </body>
 </html>

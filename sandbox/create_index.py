@@ -37,7 +37,7 @@ PREAMBLE = \
             list-style-type: none;
         }
         li {
-            margin-bottom: 2ex;
+            margin-bottom: 3ex;
         }
     </style>
 </head>

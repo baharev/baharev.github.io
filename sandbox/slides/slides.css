@@ -14,7 +14,7 @@ body {
 
 /*----------------------------------------------------------------------------*/
 
-/*/
+/*
 div, nav, span, img, h1, p {
   border-style: solid ! important;
   border-color: yellow;
@@ -94,8 +94,8 @@ nav {
 
   background-color: #333;
   border-color: #333;
-  border-radius: 3px;
-  border: 3px solid #333;
+  border-radius: 6px;
+  border: 6px solid #333;
 }
 
 .menuitem a:hover{
@@ -110,12 +110,14 @@ nav {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 6ex)
+  height: calc(100% - 6ex);
+}
+
+.spring {
+  flex: 1;
 }
 
 .container {
-    flex: 1;
-
     box-sizing: border-box;
 
     display: flex;
@@ -170,14 +172,14 @@ span {
 @media screen and (orientation: landscape) {
 
   .tile {
-      flex-basis: 31vw;
+      flex-basis: 33%;
   }
 }
 
 @media screen and (orientation: portrait) {
 
     .tile {
-        flex-basis: 46vw;
+        flex-basis: 49.5%;
     }
 }
 
@@ -188,6 +190,11 @@ span {
     height: 4ex;
     padding-left: 2px;
     padding-right: 2px;
+  }
+
+  .menuitem a {
+    border-radius: 3px;
+    border: 3px solid #333;
   }
 
   #banner {
