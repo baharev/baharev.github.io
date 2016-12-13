@@ -49,7 +49,7 @@ PREAMBLE = \
 '''<!doctype html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Slide {i}</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
