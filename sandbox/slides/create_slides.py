@@ -54,8 +54,6 @@ PREAMBLE = \
     <title>Slide {i}</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="slides.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
     </script>
@@ -65,13 +63,13 @@ PREAMBLE = \
     <nav>
       <div class="menubar">
           <div class="menuitem">
-            <span onclick="$(body).load('{prev}');">&#x21e6;&nbsp;Előző</span>
+            <a href="{prev}">&#x21e6;&nbsp;Előző</a>
           </div>
           <div class="menuitem">
             <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
          <div class="menuitem">
-            <span onclick="$(body).load('{next}');">&#x21e8;&nbsp;Következő</span>
+            <a href="{next}">&#x21e8;&nbsp;Következő</a>
           </div>
       </div>
     </nav>
