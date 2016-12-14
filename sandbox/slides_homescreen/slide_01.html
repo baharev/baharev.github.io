@@ -1,0 +1,85 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Slide 1</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="slides.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script type='application/javascript'>
+      document.addEventListener("touchstart", function() {}, false);
+    </script>
+</head>
+<body>
+    <div id="banner"></div>
+    <nav>
+      <div class="menubar">
+          <div class="menuitem">
+            <span onclick="$(body).load('slide_03.html');">&#x21e6;&nbsp;Előző</span>
+          </div>
+          <div class="menuitem">
+            <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
+          </div>
+         <div class="menuitem">
+            <span onclick="$(body).load('slide_02.html');">&#x21e8;&nbsp;Következő</span>
+          </div>
+      </div>
+    </nav>
+    <div class="centering">
+      <div class="spring"> </div>
+      <div class="container">
+
+          <audio id="audio01" src="audio/01.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Sacher torta</span>
+              <img src="images/CIMG0531.JPG" alt="CIMG0531.JPG" onclick="document.getElementById('audio01').play();"/>
+          </div>
+
+
+          <audio id="audio02" src="audio/02.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Hunderwasser ház</span>
+              <img src="images/CIMG0924.JPG" alt="CIMG0924.JPG" onclick="document.getElementById('audio02').play();"/>
+          </div>
+
+
+          <audio id="audio03" src="audio/03.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Brandenburgi kapu</span>
+              <img src="images/CIMG1226.JPG" alt="CIMG1226.JPG" onclick="document.getElementById('audio03').play();"/>
+          </div>
+
+
+          <audio id="audio04" src="audio/04.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Quadriga</span>
+              <img src="images/CIMG1261.JPG" alt="CIMG1261.JPG" onclick="document.getElementById('audio04').play();"/>
+          </div>
+
+
+          <audio id="audio05" src="audio/05.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Pariser Platz</span>
+              <img src="images/CIMG1264.JPG" alt="CIMG1264.JPG" onclick="document.getElementById('audio05').play();"/>
+          </div>
+
+
+          <audio id="audio06" src="audio/06.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Schwechat, Airbus A320</span>
+              <img src="images/CIMG1721.JPG" alt="CIMG1721.JPG" onclick="document.getElementById('audio06').play();"/>
+          </div>
+
+      </div>
+      <div class="spring"> </div>
+   </div>
+</body>
+</html>
