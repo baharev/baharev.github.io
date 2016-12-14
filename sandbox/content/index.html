@@ -5,11 +5,22 @@
     <title>Desktop content</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
+
+      $(document).ready(function() {
+        $('#dropdown_bar').click(function() {
+          $('nav').slideToggle(300);
+        });
+      });
     </script>
 </head>
 <body>
+      <div id="dropdown_bar">
+        <div>Toggle Menu</div>
+      </div>
       <nav role="navigation">
         <div class="menubar">
            <div class="menuitem">

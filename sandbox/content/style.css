@@ -12,6 +12,17 @@ html, body {
 
 /*----------------------------------------------------------------------------*/
 
+#dropdown_bar {
+  overflow: hidden;
+  height: 0;
+}
+
+#dropdown_bar:hover {
+  background-color: blue;
+}
+
+/*----------------------------------------------------------------------------*/
+
 nav {
   /* Pin this element to the top of the page */
   position: fixed;
@@ -201,6 +212,16 @@ nav {
 
 @media screen and (max-width: 480px) {
 
+  #dropdown_bar {
+    height: 4ex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: black;
+  }
+
   nav {
     position: static;
     top: auto;
@@ -228,4 +249,10 @@ nav {
     margin-top: 0;
   }
 
+}
+
+@media screen and (min-width: 481px) {
+   nav {
+     display: flex ! important;
+   }
 }
