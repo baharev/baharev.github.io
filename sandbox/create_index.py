@@ -6,7 +6,7 @@ from os import listdir
 from os.path import isdir
 
 def main():
-    ignore = set(('__pycache__', 'images'))
+    ignore = set(('__pycache__', 'images', 'nyuszi_template'))
     dirs = sorted(e for e in listdir('.') if isdir(e) and e not in ignore)
     print(', '.join(dirs))
     links = '\n'.join(to_link(d) for d in dirs)

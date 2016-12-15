@@ -1,0 +1,273 @@
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: dimgray;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#dropdown_bar {
+  overflow: hidden;
+  height: 0;
+
+  color: white;
+  background-color: black;
+  font-size: large;
+}
+
+#dropdown_bar:hover {
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------*/
+
+nav {
+  /* Pin this element to the top of the page */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 5ex;
+
+  /* Center the menubar (the only child) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: gray;
+  color: white;
+  border-bottom: 2px ridge white;
+}
+
+.menubar {
+  flex: 1;
+
+  /* Put the menu items (children) to the left */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  box-sizing: border-box;
+  max-width: 60ch; /* Must match the width of the article */
+}
+
+.menuitem {
+  flex: 1 1 8ch;
+  max-width: 15ch;
+  height: 3.5ex;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 3px;
+  border-radius: 8px;
+  background-color: black;
+
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.menuitem a {
+
+  text-decoration: none;
+  font-size: large;
+
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+
+  color: white;
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+}
+
+.menuitem:hover{
+  background-color: #555;
+  border-radius: 6px;
+}
+
+.button_disabled {
+  opacity: 0.5;
+  cursor: not-allowed ! important;
+}
+
+#spring {
+  /* Acts like a spring */
+  flex: 1 10;
+
+  box-sizing: border-box;
+  margin: 3px;
+  border: 2px #33FF00 solid;
+  min-width: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#content_wrapper {
+  /* This element must have a top margin that equals the height of the <nav> */
+  margin-top: 5ex;
+  box-sizing: border-box;
+  border: 3px yellow solid;
+}
+
+#content {
+  box-sizing: border-box;
+  border: 3px #49fb35 solid;
+  margin: 0 auto;
+
+  background-color: antiquewhite;
+  color: black;
+  width: 60ch;
+  min-height: calc(100vh - 5ex);
+  padding-left: 2ch;
+  padding-right: 2ch;
+  padding-top: 3ex;
+  padding-bottom: 10ex;
+  line-height: 180%;
+}
+
+#left_image {
+  position: fixed;
+  top: 5ex;
+  right: calc(50% + 30ch);
+
+  box-sizing: border-box;
+  border: 3px solid blue;
+
+  width: calc(50% - 30ch);
+  height: calc(100vh - 5ex);
+  display: block;
+  overflow: hidden;
+
+  background-image: url("../images/background_left.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+#right_image {
+  position: fixed;
+  top: 5ex;
+  right: 0;
+  left: calc(50% + 30ch);
+
+  box-sizing: border-box;
+  border: 3px solid blue;
+
+  width: calc(50% - 30ch);
+  height: calc(100vh - 5ex);
+  display: block;
+  overflow: hidden;
+
+  background-image: url("../images/background_right.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1200px) {
+
+  nav {
+    padding-left: 2ch;
+    justify-content: flex-start;
+  }
+
+
+  #left_image {
+    display: none;
+  }
+
+  #content {
+    margin-left: 2ch;
+  }
+
+  #right_image {
+    background-image: url("../images/background.jpg");
+    left: calc(62ch);
+    width: calc(100% - 62ch);
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+
+  nav {
+    padding-left: 0;
+    justify-content:  flex-start;
+  }
+
+  .menubar {
+    max-width: none;
+  }
+
+  #left_image {
+    display: none;
+  }
+
+  #content {
+    margin: 0 auto;
+    max-width: 60ch;
+    width: auto;
+  }
+
+  #right_image {
+    display: none;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+  #dropdown_bar {
+    height: 5ex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    position: static;
+    top: auto;
+    height: auto;
+  }
+
+  .menubar {
+    flex-flow: column;
+  }
+
+  .menuitem {
+    max-width: none;
+    width: 98%;
+    max-height: 5ex;
+    box-sizing: border-box;
+  }
+
+  #spring {
+    display: none;
+  }
+
+  #content_wrapper {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 481px) {
+   nav {
+     display: flex ! important;
+     height: 5ex ! important;
+   }
+}

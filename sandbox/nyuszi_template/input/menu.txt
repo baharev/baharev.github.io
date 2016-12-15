@@ -1,0 +1,3 @@
+	index	author	illustrator
+de	Märchen	Autor	Illustratorin
+hu	Mesék	Szerző	Illusztrátor
