@@ -5,37 +5,56 @@
     <title>Desktop content</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    <script src="js/jquery.min.js">
     </script>
     <script type='application/javascript'>
+      /* Needed for iPhone, iPad:  */
       document.addEventListener("touchstart", function() {}, false);
-
+      /* Customizing the menu: */
       $(document).ready(function() {
+        /* To toggle the menu on mobiles:  */
+        $('nav').slideUp(300);
         $('#dropdown_bar').click(function() {
           $('nav').slideToggle(300);
         });
+        /* Disable the button of the current page */
+        try {
+          var toDisable = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+          toDisable = toDisable === "" ? 'index.html' : toDisable;
+          var Obj = document.getElementById(toDisable);
+          if (Obj) {
+            var btn = $(Obj);
+            btn.addClass('button_disabled');
+            btn.children().addClass('button_disabled')
+          }
+        }
+        catch(err) { }
+        /* Set the contact address */
+        var s0 = 'hu'; var s1 = 'batornyuszi'; var s2 = '\u002e';
+        var s3 = 'info'; var s4 = '\u0040'; var s5 = 'mailto:'
+        $("#contact_info").attr('href', s5 + s3 + s4 + s1 + s2 + s0);
       });
     </script>
 </head>
 <body>
       <div id="dropdown_bar">
-        <div>Toggle Menu</div>
+        <div>&#x21F3; Toggle Menu</div>
       </div>
       <nav role="navigation">
         <div class="menubar">
            <div class="menuitem">
               <a href="">Home</a>
             </div>
-            <div class="menuitem">
+            <div class="menuitem" id="index.html">
               <a href="">About</a>
             </div>
             <div class="menuitem">
               <a href="">Store</a>
             </div>
-            <div class="menuitem">
-              <a href="">Contact</a>
-            </div>
             <div id="spring">
+            </div>
+            <div class="menuitem">
+              <a href="#" id="contact_info">@</a>
             </div>
             <div class="menuitem">
               <a href="">Facebook</a>
