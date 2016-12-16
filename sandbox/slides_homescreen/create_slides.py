@@ -67,7 +67,7 @@ PREAMBLE = \
            setTimeout(function(){{
                body.style.display = disp;
                n.parentNode.removeChild(n);
-           }},100);
+           }},20);
       }});
     </script>
 </head>
@@ -77,9 +77,6 @@ PREAMBLE = \
       <div class="menubar">
           <div class="menuitem">
             <span onclick="$.get('{prev}',function(data){{var d=document.open('text/html','replace');d.write(data);d.close();}});">&#x21e6;&nbsp;Előző</span>
-          </div>
-          <div class="menuitem">
-            <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
          <div class="menuitem">
             <span onclick="$.get('{next}',function(data){{var d=document.open('text/html','replace');d.write(data);d.close();}});">&#x21e8;&nbsp;Következő</span>
