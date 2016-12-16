@@ -59,6 +59,7 @@ PREAMBLE = \
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
       $(window).on('load', function() {{
+           $('body').hide().show(0);
            $(window).trigger('resize');
       }});
     </script>
