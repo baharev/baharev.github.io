@@ -17,13 +17,13 @@
     <nav>
       <div class="menubar">
           <div class="menuitem">
-            <span onclick="$(body).load('slide_03.html');">&#x21e6;&nbsp;Előző</span>
+            <span onclick="$.get('slide_03.html',function(data){var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e6;&nbsp;Előző</span>
           </div>
           <div class="menuitem">
             <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
          <div class="menuitem">
-            <span onclick="$(body).load('slide_02.html');">&#x21e8;&nbsp;Következő</span>
+            <span onclick="$.get('slide_02.html',function(data){var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e8;&nbsp;Következő</span>
           </div>
       </div>
     </nav>

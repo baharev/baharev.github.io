@@ -65,13 +65,13 @@ PREAMBLE = \
     <nav>
       <div class="menubar">
           <div class="menuitem">
-            <span onclick="$(body).load('{prev}');">&#x21e6;&nbsp;Előző</span>
+            <span onclick="$.get('{prev}',function(data){{var d=document.open('text/html','replace');d.write(data);d.close();}});">&#x21e6;&nbsp;Előző</span>
           </div>
           <div class="menuitem">
             <a href="index.html">&#x21bb;&nbsp;Kilépés</a>
           </div>
          <div class="menuitem">
-            <span onclick="$(body).load('{next}');">&#x21e8;&nbsp;Következő</span>
+            <span onclick="$.get('{next}',function(data){{var d=document.open('text/html','replace');d.write(data);d.close();}});">&#x21e8;&nbsp;Következő</span>
           </div>
       </div>
     </nav>
