@@ -69,7 +69,7 @@ PREAMBLE = \
     </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
-      /*$(window).on('load', function() {{
+      $(window).on('load', function() {{
            var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
@@ -79,7 +79,7 @@ PREAMBLE = \
                body.style.display = disp;
                n.parentNode.removeChild(n);
            }},20);
-      }});*/
+      }});
     </script>
 </head>
 <body>
