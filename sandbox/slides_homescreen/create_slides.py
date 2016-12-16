@@ -1,6 +1,7 @@
 # Copyright (C) 2016 by Ali Baharev <ali.baharev@gmail.com>
 # All rights reserved.
 # BSD license.
+from datetime import datetime
 from itertools import count
 from glob import glob
 from os import listdir
@@ -17,7 +18,7 @@ def main():
     write_app_cache()
 
 def write_app_cache():
-    manifest = ['CACHE MANIFEST']
+    manifest = ['CACHE MANIFEST', datetime.now().strftime("# %H:%M:%S %B %d, %Y")]
     for items in ('audio/*', 'images/*', 'js/*', '*.html', '*.css'):
         manifest.extend(sorted(glob(items)))
     manifest.append('favicon.ico')
@@ -63,7 +64,6 @@ PREAMBLE = \
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Slide {i}</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="slides.css">
     <script src="js/jquery.min.js">
     </script>
