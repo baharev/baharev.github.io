@@ -59,6 +59,11 @@ PREAMBLE = \
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
       $(window).on('load', function() {{
+            $('body').css("border", "solid 1px transparent");
+            setTimeout(function()
+            {{
+                $('body').css("border", "solid 0px transparent");
+            }}, 100);
            /*var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
