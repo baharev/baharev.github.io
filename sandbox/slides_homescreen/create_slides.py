@@ -59,7 +59,6 @@ PREAMBLE = \
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
       $(window).on('load', function() {{
-           $('nav').toggleClass('force-redraw');
            /*var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
