@@ -105,11 +105,6 @@ nav {
   border: 6px solid #333;
 }
 
-.menuitem span:hover{
-  background-color: #555;
-  border-color: #555;
-}
-
 /*----------------------------------------------------------------------------*/
 
 .centering {
