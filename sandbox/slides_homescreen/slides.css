@@ -1,4 +1,8 @@
 
+.force-redraw::before {
+  content: "";
+}
+
 html, body {
     background-color: lightgrey;
     width: 100%;

@@ -59,7 +59,8 @@ PREAMBLE = \
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
       $(window).on('load', function() {{
-           var n = document.createTextNode(' ');
+           $('nav').toggleClass('force-draw');
+           /*var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
            body.appendChild(n);
@@ -67,7 +68,7 @@ PREAMBLE = \
            setTimeout(function(){{
                body.style.display = disp;
                n.parentNode.removeChild(n);
-           }},100);
+           }},100);*/
       }});
     </script>
 </head>
