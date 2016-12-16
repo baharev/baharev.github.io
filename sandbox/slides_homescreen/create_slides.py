@@ -2,6 +2,7 @@
 # All rights reserved.
 # BSD license.
 from itertools import count
+from glob import glob
 from os import listdir
 from toolz import partition_all
 
@@ -13,6 +14,15 @@ def main():
     size = len(content) // step
     for i, img_cap_idx_list in enumerate(partition_all(step, content)):
         create_slide(i, size, img_cap_idx_list)
+    write_app_cache()
+
+def write_app_cache():
+    manifest = ['CACHE MANIFEST']
+    for items in ('audio/*', 'images/*', 'js/*', '*.html', '*.css'):
+        manifest.extend(sorted(glob(items)))
+    manifest.append('favicon.ico')
+    with open('cache.appcache', 'w') as f:
+        f.write('\n'.join(manifest))
 
 
 def create_slide(i, size, img_cap_idx_list):
@@ -47,6 +57,7 @@ TILE = \
 
 PREAMBLE = \
 '''<!doctype html>
+<html manifest="cache.appcache">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
@@ -54,11 +65,11 @@ PREAMBLE = \
     <title>Slide {i}</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="slides.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    <script src="js/jquery.min.js">
     </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
-      $(window).on('load', function() {{
+      /*$(window).on('load', function() {{
            var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
@@ -68,7 +79,7 @@ PREAMBLE = \
                body.style.display = disp;
                n.parentNode.removeChild(n);
            }},20);
-      }});
+      }});*/
     </script>
 </head>
 <body>

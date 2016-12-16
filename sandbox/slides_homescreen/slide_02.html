@@ -1,4 +1,5 @@
 <!doctype html>
+<html manifest="cache.appcache">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
@@ -6,11 +7,11 @@
     <title>Slide 2</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="slides.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    <script src="js/jquery.min.js">
     </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
-      $(window).on('load', function() {
+      /*$(window).on('load', function() {
            var n = document.createTextNode(' ');
            var body = document.body;
            var disp = body.style.display;
@@ -20,7 +21,7 @@
                body.style.display = disp;
                n.parentNode.removeChild(n);
            },20);
-      });
+      });*/
     </script>
 </head>
 <body>
