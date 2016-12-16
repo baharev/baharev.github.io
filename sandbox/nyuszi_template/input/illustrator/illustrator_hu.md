@@ -1,4 +1,4 @@
-﻿![Cselotei Zsofia](images/cszs.jpg)
+![Cselotei Zsofia](../images/cszs.jpg)
 
 # Cselőtei Zsófia Olga
 

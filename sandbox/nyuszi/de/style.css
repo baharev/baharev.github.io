@@ -88,7 +88,6 @@ nav {
 }
 
 .menuitem:hover{
-  /*amikor felette van az eger*/
   /*background-color: lightgreen;*/
   background-color: rgb(222, 241, 181); 
   color: rgb(128, 128, 128);
@@ -172,7 +171,7 @@ nav {
   display: block;
   overflow: hidden;
 
-  background-image: url("images/background_left.jpg");
+  background-image: url("../images/background_left.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right top;
@@ -192,7 +191,7 @@ nav {
   display: block;
   overflow: hidden;
 
-  background-image: url("images/background_right.jpg");
+  background-image: url("../images/background_right.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -218,7 +217,7 @@ nav {
   }
 
   #right_image {
-    background-image: url("images/background.jpg");
+    background-image: url("../images/background.jpg");
     left: calc(62ch);
     width: calc(100% - 62ch);
   }

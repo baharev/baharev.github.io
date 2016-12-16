@@ -1,4 +1,4 @@
-﻿![Frank Peter](images/fp.jpg)
+![Frank Peter](../images/fp.jpg)
 
 # Péter Frank
 
