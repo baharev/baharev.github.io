@@ -6,8 +6,24 @@
     <title>Slide 2</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="slides.css">
+    <script src="js/jquery.min.js">
+    </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
+      $(window).on('load', function() {
+           var body = document.body;
+           if (body.offsetHeight < body.scrollHeight ||
+               body.offsetWidth  < body.scrollWidth) {
+                   var n = document.createTextNode(' ');
+                   var disp = body.style.display;
+                   body.appendChild(n);
+                   body.style.display = 'none';
+                   setTimeout(function(){
+                       body.style.display = disp;
+                       n.parentNode.removeChild(n);
+                   },20);
+           }
+      });
     </script>
 </head>
 <body>
