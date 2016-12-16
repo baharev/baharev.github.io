@@ -58,6 +58,9 @@ PREAMBLE = \
     </script>
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {{}}, false);
+      $(window).on('load', function() {{
+           $(window).trigger('resize');
+      }});
     </script>
 </head>
 <body>
