@@ -11,15 +11,18 @@
     <script type='application/javascript'>
       document.addEventListener("touchstart", function() {}, false);
       $(window).on('load', function() {
-           var n = document.createTextNode(' ');
            var body = document.body;
-           var disp = body.style.display;
-           body.appendChild(n);
-           body.style.display = 'none';
-           setTimeout(function(){
-               body.style.display = disp;
-               n.parentNode.removeChild(n);
-           },20);
+           if (body.offsetHeight < body.scrollHeight ||
+               body.offsetWidth  < body.scrollWidth) {
+                   var n = document.createTextNode(' ');
+                   var disp = body.style.display;
+                   body.appendChild(n);
+                   body.style.display = 'none';
+                   setTimeout(function(){
+                       body.style.display = disp;
+                       n.parentNode.removeChild(n);
+                   },20);
+           }
       });
     </script>
 </head>
