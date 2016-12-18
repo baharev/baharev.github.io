@@ -8,6 +8,7 @@ from shutil import copy, rmtree, copytree
 from string import Formatter
 
 from markdown import markdown
+from builtins import str
 
 OUT_DIR = '/tmp/output/'
 IN_DIR = '/tmp/input/'
@@ -128,16 +129,27 @@ def md_to_html(md_text):
                     extensions=['markdown.extensions.attr_list'])
 
 def write(filepath, content):
-    open(filepath, 'w').write(content)
+    check_bom(content, filepath)
+    with open(filepath, 'w') as f:
+        f.write(content)
 
 def get_first_line(filepath):
-    return next(open(filepath, 'r'))
+    with open(filepath, 'r') as f:
+        first_line = next(f)
+        check_bom(first_line, filepath)
+        return first_line
 
 def get_lines(filepath):
-    return open(filepath, 'r').read().splitlines()    
+    return get_as_str(filepath).splitlines()    
 
 def get_as_str(filepath):
-    return open(filepath, 'r').read()
+    with open(filepath, 'r') as f:
+        content = f.read()
+        check_bom(content, filepath)
+        return content
+
+def check_bom(str_to_check, msg):
+    assert '\uFEFF' not in str_to_check, 'BOM found: ' + msg
 
 def clean(directory):
     rmtree(directory, ignore_errors=True)
