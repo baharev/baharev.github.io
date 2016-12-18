@@ -23,7 +23,6 @@ def main():
     menu_pages, lang_menutitles = get_menu_content(IN_DIR + 'menu.txt')
     for lang, menu_titles in lang_menutitles.items():
         write_site(lang, site_template, menu_pages, menu_titles, tales_by_lang[lang])
-    copytree(IN_DIR + 'images/', OUT_DIR + 'images/')
 
 #-------------------------------------------------------------------------------
 
@@ -80,6 +79,7 @@ def write_site(lang, site_template, menu_pages, menu_titles, tales):
     copy(IN_DIR + 'style.css', OUT_DIR + lang + '/')
     copy(IN_DIR + 'images/icon.ico', OUT_DIR + lang + '/')
     copytree(IN_DIR + 'js/', OUT_DIR + lang + '/js/')
+    copytree(IN_DIR + 'images/', OUT_DIR + lang + '/images/')
     print('---------------------------------------------------------------')
 
 def write_tales(site_template, lang, menu_links, tales):
