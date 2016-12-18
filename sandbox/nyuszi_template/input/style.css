@@ -12,10 +12,10 @@ html, body {
 #dropdown_bar {
   overflow: hidden;
   height: 0;
-  
+
   color: black;
-  background-color: rgb(192, 228, 114);  
-  font-size: large;  
+  background-color: rgb(192, 228, 114);
+  font-size: large;
 }
 
 #dropdown_bar:hover {
@@ -89,9 +89,9 @@ nav {
 
 .menuitem:hover{
   /*background-color: lightgreen;*/
-  background-color: rgb(222, 241, 181); 
+  background-color: rgb(222, 241, 181);
   color: rgb(128, 128, 128);
-  
+
   /*border-radius: 8px;*/
 }
 
@@ -99,8 +99,8 @@ nav {
   /*opacity: 0.5;*/
   cursor: not-allowed ! important;
   /*background-color: green ! important;*/
-  background-color: rgb(222, 241, 181);
-  color:rgb(128, 128, 128);
+  background-color: rgb(222, 241, 181) ! important;
+  color:rgb(128, 128, 128) ! important;
 }
 
 #spring {
@@ -139,18 +139,18 @@ nav {
 }
 
 #content h1 {
-    text-align: center; 
+    text-align: center;
 }
 
 #content img {
     padding: 2ch;
-    max-width: 80%;   
+    max-width: 80%;
     display: block;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
 }
 
-#content ul { 
+#content ul {
    list-style-type: square;
 }
 
@@ -258,12 +258,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    background-color: rgb(192, 228, 114);
   }
 
   nav {
+    background-color: rgb(222, 241, 181);
     position: static;
     top: auto;
     height: auto;
+    padding-top: 2px;
   }
 
   .menubar {
@@ -275,6 +279,13 @@ nav {
     width: 98%;
     max-height: 5ex;
     box-sizing: border-box;
+    background-color: rgb(192, 228, 114);
+    border-radius: 10px;
+    padding: 2px;
+  }
+
+  .menuitem:hover{
+    background-color: rgb(192, 228, 114);
   }
 
   #spring {
