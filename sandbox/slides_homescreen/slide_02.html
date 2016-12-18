@@ -31,10 +31,10 @@
     <nav>
       <div class="menubar">
           <div class="menuitem">
-            <span onclick="$.get('slide_01.html',function(data){var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e6;&nbsp;Előző</span>
+            <span onclick="$.get('slide_01.html',function(data){$('html').remove(); var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e6;&nbsp;Előző</span>
           </div>
          <div class="menuitem">
-            <span onclick="$.get('slide_03.html',function(data){var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e8;&nbsp;Következő</span>
+            <span onclick="$.get('slide_03.html',function(data){$('html').remove(); var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e8;&nbsp;Következő</span>
           </div>
       </div>
     </nav>
