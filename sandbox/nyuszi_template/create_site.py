@@ -8,7 +8,6 @@ from shutil import copy, rmtree, copytree
 from string import Formatter
 
 from markdown import markdown
-from builtins import str
 
 OUT_DIR = '/tmp/output/'
 IN_DIR = '/tmp/input/'
