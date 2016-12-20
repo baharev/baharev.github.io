@@ -52,7 +52,8 @@ TILE = \
 
           <div class="tile">
               <span class="img_text">{caption}</span>
-              <img src="images/{image}" alt="{image}" id="image{i}" data-audio="audio{i}"/>
+              <img src="images/{image}" alt="{image}" 
+              id="image{i}" data-audio="audio{i}" style="pointer-events:none"/>
           </div>
 '''
 
