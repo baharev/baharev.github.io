@@ -22,7 +22,7 @@ $(window).on('load', function() {
              },20);
      }
 
-     $('img').on('mousedown', playAudio);
+     $('img').on('touchstart', playAudio);
 
      console.log('Callback added!')
 });
