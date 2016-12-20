@@ -1,0 +1,79 @@
+<!doctype html>
+<html manifest="cache.appcache">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Slide 1</title>
+    <link rel="stylesheet" href="slides.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div id="banner"></div>
+    <nav>
+      <div class="menubar">
+          <div class="menuitem">
+            <span onclick="$.get('slide_03.html',function(data){$('html').remove(); var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e6;&nbsp;Előző</span>
+          </div>
+         <div class="menuitem">
+            <span onclick="$.get('slide_02.html',function(data){$('html').remove(); var d=document.open('text/html','replace');d.write(data);d.close();});">&#x21e8;&nbsp;Következő</span>
+          </div>
+      </div>
+    </nav>
+    <div class="centering">
+      <div class="spring"> </div>
+      <div class="container">
+
+          <audio id="audio01" src="audio/01.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Sacher torta</span>
+              <img src="images/CIMG0531.JPG" alt="CIMG0531.JPG" id="image01" data-audio="audio01"/>
+          </div>
+
+
+          <audio id="audio02" src="audio/02.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Hunderwasser ház</span>
+              <img src="images/CIMG0924.JPG" alt="CIMG0924.JPG" id="image02" data-audio="audio02"/>
+          </div>
+
+
+          <audio id="audio03" src="audio/03.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Brandenburgi kapu</span>
+              <img src="images/CIMG1226.JPG" alt="CIMG1226.JPG" id="image03" data-audio="audio03"/>
+          </div>
+
+
+          <audio id="audio04" src="audio/04.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Quadriga</span>
+              <img src="images/CIMG1261.JPG" alt="CIMG1261.JPG" id="image04" data-audio="audio04"/>
+          </div>
+
+
+          <audio id="audio05" src="audio/05.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Pariser Platz</span>
+              <img src="images/CIMG1264.JPG" alt="CIMG1264.JPG" id="image05" data-audio="audio05"/>
+          </div>
+
+
+          <audio id="audio06" src="audio/06.m4a"></audio>
+
+          <div class="tile">
+              <span class="img_text">Airbus A320</span>
+              <img src="images/CIMG1721.JPG" alt="CIMG1721.JPG" id="image06" data-audio="audio06"/>
+          </div>
+
+      </div>
+      <div class="spring"> </div>
+   </div>
+</body>
+</html>
