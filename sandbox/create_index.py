@@ -1,4 +1,5 @@
-# Copyright (C) 2016 by Ali Baharev <ali.baharev@gmail.com>
+#!/usr/bin/env python3
+# Copyright (C) 2016, 2017 by Ali Baharev <ali.baharev@gmail.com>
 # All rights reserved.
 # BSD license.
 
