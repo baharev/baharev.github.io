@@ -30,7 +30,11 @@
       <p id="dimensions"> JavaScript sees: </p>
       <p id="css_orientation"> CSS orientation: </p>
       <p id="user_agent"> User agent: </p>
-
+      <p id="js_window_orientation">JS window.orientation: </p>
+      <p id="only_screen">only screen: </p>
+      <p id="max_touchpoints">has max touchpoints: </p>
+      <p id="mobi">has mobi: </p>
+      <p id="Android">Android: </p>
       <script type="text/javascript">
           /* Write screen size */
           window.onresize = displayWindowSize;
@@ -40,6 +44,12 @@
           };
           /* Write browser name and version, and the platform */
           document.getElementById("user_agent").innerHTML = "User agent: " + navigator.userAgent;
+          /* Trying to detect whether it is a mobile device: */
+          document.getElementById("js_window_orientation").innerHTML = "JS window.orientation: " + window.orientation;
+          document.getElementById("only_screen").innerHTML = "only screen: " + window.matchMedia("only screen").matches;
+          document.getElementById("max_touchpoints").innerHTML = "has max touchpoints: " + ("maxTouchPoints" in navigator);
+          document.getElementById("mobi").innerHTML = "has mobi: " + (/Mobi/i.test(navigator.userAgent));
+          document.getElementById("Android").innerHTML = "Andoid: " + (/Android/i.test(navigator.userAgent));
       </script>
 </body>
 </html>
