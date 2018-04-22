@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /finding_all_solutions.html
+Disallow: /
