@@ -24,6 +24,7 @@ html, body {
 body {
     font-family: sans-serif;
     overflow: hidden;
+    height: calc(100% + 1px);
 }
 
 </style>
@@ -31,6 +32,7 @@ body {
 <script type="text/javascript">
 
 function displayWindowSize() {
+  setTimeout(function() { window.scrollTo(0, 1); }, 1000);
   document.getElementById("height").innerHTML = "height: " + window.innerHeight + " pixels";
 };
 
