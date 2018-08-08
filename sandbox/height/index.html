@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Height tests</title>
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  user-select: none;
+}
+
+html, body {
+  background-color: lightgrey;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function displayWindowSize() {
+  document.getElementById("height").innerHTML = "height: " + window.innerHeight + " pixels";
+};
+
+function onpageload() {
+  window.addEventListener(
+    "touchmove",
+    function(e) {  e.preventDefault(); e.stopPropagation(); },
+    { passive: false } // <-- Now required by webkit
+  );
+  displayWindowSize();
+}
+
+window.onresize = displayWindowSize;
+window.onload = onpageload;
+
+</script>
+
+  </head>
+  <body>
+    <p id="height"> </p>
+  </body>
+</html>
