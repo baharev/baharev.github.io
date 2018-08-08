@@ -28,13 +28,15 @@ body {
 
 @media screen and (orientation: portrait) {
     #css_orientation::after {
-        content: "portrait"
+        content: "portrait";
+        display: flex;
     }
 }
 
 @media screen and (orientation: landscape) {
     #css_orientation::after {
-        content: "landscape"
+        content: "landscape";
+        display: block;
     }
 }
 
