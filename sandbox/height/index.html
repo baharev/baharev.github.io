@@ -26,6 +26,18 @@ body {
     overflow: hidden;
 }
 
+@media screen and (orientation: portrait) {
+    #css_orientation::after {
+        content: "portrait"
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #css_orientation::after {
+        content: "landscape"
+    }
+}
+
 </style>
 
 <script type="text/javascript">
@@ -51,5 +63,6 @@ window.onload = onpageload;
   </head>
   <body>
     <p id="height"> </p>
+    <p id="css_orientation"> CSS orientation: </p>
   </body>
 </html>
