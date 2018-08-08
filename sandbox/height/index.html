@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Height tests</title>
 <style type="text/css">
@@ -24,7 +24,6 @@ html, body {
 body {
     font-family: sans-serif;
     overflow: hidden;
-    height: calc(100% + 1px);
 }
 
 </style>
@@ -32,7 +31,6 @@ body {
 <script type="text/javascript">
 
 function displayWindowSize() {
-  setTimeout(function() { window.scrollTo(0, 1); }, 1000);
   document.getElementById("height").innerHTML = "height: " + window.innerHeight + " pixels";
 };
 
