@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "https://www.baharev.info/sandbox/ghost-click/static/css/main.734304b6.chunk.css",
+    "main.js": "https://www.baharev.info/sandbox/ghost-click/static/js/main.29e7793a.chunk.js",
+    "main.js.map": "https://www.baharev.info/sandbox/ghost-click/static/js/main.29e7793a.chunk.js.map",
+    "runtime-main.js": "https://www.baharev.info/sandbox/ghost-click/static/js/runtime-main.50cc458b.js",
+    "runtime-main.js.map": "https://www.baharev.info/sandbox/ghost-click/static/js/runtime-main.50cc458b.js.map",
+    "static/js/2.b255fd3f.chunk.js": "https://www.baharev.info/sandbox/ghost-click/static/js/2.b255fd3f.chunk.js",
+    "static/js/2.b255fd3f.chunk.js.map": "https://www.baharev.info/sandbox/ghost-click/static/js/2.b255fd3f.chunk.js.map",
+    "index.html": "https://www.baharev.info/sandbox/ghost-click/index.html",
+    "static/css/main.734304b6.chunk.css.map": "https://www.baharev.info/sandbox/ghost-click/static/css/main.734304b6.chunk.css.map",
+    "static/js/2.b255fd3f.chunk.js.LICENSE.txt": "https://www.baharev.info/sandbox/ghost-click/static/js/2.b255fd3f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50cc458b.js",
+    "static/js/2.b255fd3f.chunk.js",
+    "static/css/main.734304b6.chunk.css",
+    "static/js/main.29e7793a.chunk.js"
+  ]
+}
