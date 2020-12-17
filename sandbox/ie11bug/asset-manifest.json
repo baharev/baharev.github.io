@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/sandbox/ie11bug/static/js/main.5beb7135.chunk.js",
+    "main.js.map": "/sandbox/ie11bug/static/js/main.5beb7135.chunk.js.map",
+    "runtime-main.js": "/sandbox/ie11bug/static/js/runtime-main.3b2fb57b.js",
+    "runtime-main.js.map": "/sandbox/ie11bug/static/js/runtime-main.3b2fb57b.js.map",
+    "static/js/2.72241442.chunk.js": "/sandbox/ie11bug/static/js/2.72241442.chunk.js",
+    "static/js/2.72241442.chunk.js.map": "/sandbox/ie11bug/static/js/2.72241442.chunk.js.map",
+    "index.html": "/sandbox/ie11bug/index.html",
+    "static/js/2.72241442.chunk.js.LICENSE.txt": "/sandbox/ie11bug/static/js/2.72241442.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b2fb57b.js",
+    "static/js/2.72241442.chunk.js",
+    "static/js/main.5beb7135.chunk.js"
+  ]
+}

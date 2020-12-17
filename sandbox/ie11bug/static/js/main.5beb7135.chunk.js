@@ -1,0 +1,2 @@
+(this.webpackJsonpie11bug=this.webpackJsonpie11bug||[]).push([[0],{174:function(e,t,n){"use strict";n.r(t);var o=n(172),r=(n(177),n(187),n(79),n(173));n.n(r).a.render(Object(o.jsx)("p",{children:"Hello, World!"}),document.getElementById("root"))}},[[174,1,2]]]);
+//# sourceMappingURL=main.5beb7135.chunk.js.map
